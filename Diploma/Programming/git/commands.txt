@@ -1,0 +1,29 @@
+🛠️ Git Setup & Configuration
+
+Command	When to use / Purpose
+git init	When starting a brand-new project from scratch on your local computer to turn the folder into a Git repository.
+git remote add origin <URL>	When you have a local project and want to link it to a newly created empty repository on GitHub.
+git remote -v	When you want to verify which online URL your local repository is currently talking to.
+
+📝 Saving Progress (Daily Workflow)
+
+Command	When to use / Purpose
+git status	Run this constantly. Use it to see which files you modified, created, or forgot to track before committing.
+git add .	When you finish editing code and want to stage all your changes so they can be snapshotted.
+git commit -m "your message"	Right after git add ., use this to permanently save your staged changes into your local history with a summary message.
+
+🌿 Branching & Managing Code Safely
+
+Command	When to use / Purpose
+git branch	When you need to list all your local branches and confirm which active branch you are currently working on.
+git switch -c <branch-name>	When starting a new feature or bug fix so you can work safely without touching or breaking the main branch.
+git switch <branch-name>	When you want to jump from your current branch over to a different existing branch (e.g., going back to main).
+git branch -D <branch-name>	When you want to permanently wipe a branch off your local machine (e.g., cleaning up a branch you already deleted on GitHub).
+
+🌐 Syncing & Uploading to GitHub
+
+Command	When to use / Purpose
+git push -u origin <branch-name>	The very first time you push a newly created local branch up to GitHub. It links the local and remote branches.
+git push	For all subsequent pushes on an already-linked branch after you have run the initial -u push command.
+git pull origin main --rebase	When your push is rejected because GitHub has newer commits than your local machine. It seamlessly stacks your local work on top.
+git fetch origin --prune	When you delete branches on the GitHub website and want your local system to stop remembering those dead branches.
